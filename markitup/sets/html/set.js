@@ -10,6 +10,7 @@
 // Basic set. Feel free to add more tags
 // ----------------------------------------------------------------------------
 markitupHTML = {
+    nameSpace:      "html",
 	onShiftEnter:	{keepDefault:false, replaceWith:'<br />\n'},
 	onCtrlEnter:	{keepDefault:false, openWith:'\n<p>', closeWith:'</p>\n'},
 	onTab:			{keepDefault:false, openWith:'	 '},
@@ -33,7 +34,7 @@ markitupHTML = {
 		{name:'Picture', key:'P', replaceWith:'<img src="[![Source:!:http://]!]" alt="[![Alternative text]!]" />' },
 		{name:'Link', key:'L', openWith:'<a href="[![Link:!:http://]!]"(!( title="[![Title]!]")!)>', closeWith:'</a>', placeHolder:'Your text to link...' },
 		{separator:'---------------' },
-		{name:'Clean', replaceWith:function(h) { return h.selection.replace(/<(.*?)>/g, "") } },				
-		{name:'Preview', call:'preview', className:'preview' }
+		{name:'Clean', replaceWith:function(h) { return h.selection.replace(/<(.*?)>/g, "") } }/*,				
+		{name:'Preview', call:'preview', className:'preview' }*/
 	]
 }
